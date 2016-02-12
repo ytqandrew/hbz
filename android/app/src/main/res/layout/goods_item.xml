@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="fill_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_buttom"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余有效期:"
+                android:id="@+id/t_1"
+                android:textColor="@color/red"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goods_countdown"
+                android:text="3天10小时"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@id/t_1"
+                android:textColor="@color/red"
+                android:textSize="18dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运费(¥):"
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/goods_cost"
+                    android:paddingLeft="5dp"
+                    android:layout_toRightOf="@id/t_1"
+                    android:textColor="@color/light_orange"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_gray"/>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <TableRow
+                android:layout_marginBottom="10dp">
+                <com.cxhd.freight.custom.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black2"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="18dp" />
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="装车日期"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/goods_destination_timer"
+                        android:paddingLeft="5dp"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="10dp">
+                <com.cxhd.freight.custom.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black2"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/goods_origin_address"
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="10dp">
+                <com.cxhd.freight.custom.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black2"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/goods_end_address"
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="10dp">
+                <com.cxhd.freight.custom.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black2"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:layout_gravity="center" />
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:paddingLeft="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/goods_demand_info"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bodr_red"
+                        android:id="@+id/goods_type_2"
+                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="9dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingRight="9dp"
+                        android:textColor="@color/bg"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <com.cxhd.freight.custom.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black2"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="30dp"
+                    android:id="@+id/goods_note_info"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_gray"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+            <Button android:text="拨打电话"
+                android:layout_width="160dp"
+                android:textColor="@color/white"
+                android:background="@color/bt_bg"
+                android:layout_height="wrap_content"
+                android:id="@+id/call_phone"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp" />
+            <Button android:text="抢"
+                android:layout_width="160dp"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

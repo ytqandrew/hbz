@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_app">
+    <RelativeLayout
+        android:background="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/head_tipsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_landing"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="30dp"
+        android:paddingRight="15dp">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corner_no_bodr"
+            android:padding="10dip" >
+            <!-- 表格布局：第一行 -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+                <com.cxhd.freight.custom.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/landing_phone"
+                    android:maxLength="11"
+                    android:inputType="phone"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true" >
+                </EditText>
+            </TableRow>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_bottom"/>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="8dp">
+                <com.cxhd.freight.custom.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/userPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textPassword"
+                    android:password="true"
+                    android:hint="@string/landing_password"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true" >
+                </EditText>
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_buttom_red"
+            android:id="@+id/landingBtn"
+            android:onClick="onClick_Event"
+            android:layout_marginTop="20dp"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/landing_reg"
+                android:text="注册"
+                android:textSize="18dp"
+                android:clickable="true"
+                android:onClick="onClick_Event"
+                android:textColor="@drawable/text_button" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/landing_modify_password"
+                android:text="忘记密码"
+                android:textSize="18dp"
+                android:textColor="@drawable/text_button"
+                android:clickable="true"
+                android:onClick="onClick_Event"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

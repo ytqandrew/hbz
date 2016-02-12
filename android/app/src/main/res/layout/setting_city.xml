@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.cxhd.freight.custom.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:id="@+id/back"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_info_city"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setting_enter"
+            android:textColor="@color/white"
+            android:text="完成"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:onClick="onClick_Event"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <com.cxhd.freight.city.CityPicker
+        android:id="@+id/citypicker"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center" >
+    </com.cxhd.freight.city.CityPicker>
+</LinearLayout>

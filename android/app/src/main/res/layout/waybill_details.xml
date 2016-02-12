@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.cxhd.freight.custom.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:id="@+id/back"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/head_tipsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/waybill_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp">
+                    <com.cxhd.freight.custom.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/lightorange"
+                        android:layout_marginTop="2dp"
+                        android:text=""
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/goods_origin_address"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp">
+                    <com.cxhd.freight.custom.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/bg"
+                        android:layout_marginTop="1dp"
+                        android:text=""
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/goods_end_address"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/bodr_topbottom"
+                    android:orientation="horizontal" >
+                    <com.cxhd.freight.custom.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black2"
+                        android:layout_marginTop="2dp"
+                        android:text=""
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发货日期"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/goods_destination_timer"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/bodr_topbottom">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/waybill_title_goods"
+                        android:textColor="@color/nomalGray"
+                        android:paddingRight="10dp"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:lineSpacingExtra="3dp"
+                        android:id="@+id/goods_type"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/waybill_title_weight"
+                        android:textColor="@color/nomalGray"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:lineSpacingExtra="3dp"
+                        android:id="@+id/goods_weight"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bodr_red"
+                        android:id="@+id/goods_type_3"
+                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="9dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingRight="9dp"
+                        android:textColor="@color/bg"
+                        android:textSize="18dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/waybill_title_note"
+                        android:textColor="@color/nomalGray"
+                        android:paddingRight="10dp"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:lineSpacingExtra="3dp"
+                        android:id="@+id/goods_note_info"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <TableLayout
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/bodr_topbottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <TableRow
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="需要车型"
+                        android:textColor="@color/nomalGray"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car_type"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </TableRow>
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="需要车长"
+                        android:textColor="@color/nomalGray"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car_extent"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </TableRow>
+                <TableRow
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="价格区间"
+                        android:textColor="@color/nomalGray"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/price"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/bodr_topbottom">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="货主"
+                        android:textColor="@color/nomalGray"
+                        android:paddingRight="10dp"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:lineSpacingExtra="3dp"
+                        android:id="@+id/goods_host"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
